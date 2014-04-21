@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Quiz Portal</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/screen.css" />
+	<script src="/js/jquery.js" type="text/javascript"></script>
+	<script src="/js/jquery.metadata.js" type="text/javascript"></script>
+	<script src="/js/jquery.validate.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+	// only for demo purposes
+	$.validator.setDefaults({
+	        //document.getElementById("submain").innerHTML = "<p>Hey111 testing</p>";
+	        //$("#submain *").disable();
+		submitHandler: function() {
+			alert("submitted!");
+		}
+	});
+		
+	$.metadata.setType("attr", "validate");
+	
+	$(document).ready(function() {
+		$("#form1").validate();
+		$("#selecttest").validate();
+	});
+	
+	var answer = <%= answer %>;
+	var answer0 = "<%= answer0 %>";
+	var answer1 = "<%= answer1 %>";
+	var answer2 = "<%= answer2 %>";
+	var answer3 = "<%= answer3 %>";
+	
+	
+	function submitForm() { 
+	    document.forms["form1"].submit(); 
+	}
+	
+	function submitClicked() {
+	   var timeDelay = 3000; 
+	   var userAnswer = $("#form1 input[type='radio']:checked").val();
+	   if (answer == userAnswer) {
+	       document.getElementById("submain").innerHTML = "<p>Nice job!</p>";
+	       timeDelay = 1200;
+	   } else {
+	       var s = "Sorry, wrong answer!  The correct answer is ";
+	       if (answer == 0) {
+	          s += "'" + answer0 + "'";
+	       } else if (answer == 1) {
+	          s += "'" + answer1 + "'";
+	       } else if (answer == 2) {
+	          s += "'" + answer2 + "'";
+	       } else if (answer == 3) {
+	          s += "'" + answer3 + "'";
+	       }
+	      
+	       document.getElementById("submain").innerHTML = "<p>" + s + "</p>";
+	       timeDelay = 3000;
+	   }
+	 
+	   //document.getElementById("psubmit").visible="false";
+	   //document.getElementById("pnext").style.visibility = "visible"; 
+	   //document.forms["form1"].psubmit.style.visibility=hidden;
+	   //document.forms["form1"].next.style.visibility=visible;
+	   //document.forms["form1"].submit();  
+	   setTimeout("submitForm()", timeDelay); 
+	}
+	
+	
+	function nextClicked() {
+	   document.forms["form1"].submit();
+	}
+	</script>
+
+	<style type="text/css">
+	  .block { display: block; }
+	  form.cmxform label.error { display: none; }	
+	  form.cmxform label.answer { display: none; }
+	</style>
+
+</head>
+<body>
+	<div id="page" class="shell">
+		  <% include header%>
+		  <div id="main">
+		  	<div id="main-bot">
+	      		<%- body %>
+	      		<div class="cl">&nbsp;</div>
+	 		</div>
+	 	  </div>
+	 	  <% include footer%>
+ 	</div>
+</body>
+</html>

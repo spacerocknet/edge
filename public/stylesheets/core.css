@@ -1,0 +1,31 @@
+body, div { font-family: 'lucida grande', helvetica, verdana, arial, sans-serif }
+body { margin: 0; padding: 0; font-size: small; color: #333 }
+h1, h2 { font-family: 'trebuchet ms', verdana, arial; padding: 10px; margin: 0 }
+h1 { font-size: large }
+#main { padding: 1em; box-shadow: 5px 5px 10px #999;border:3px solid #060;padding:7px;background:#fee;font-size:110%; }
+#submain { padding: 50em; box-shadow: 5px 5px 10px #999;border:3px solid #060;padding:10px;background:#fee;font-size:120%; }
+
+#banner { padding: 15px; background-color: #06b; color: white; font-size: large; border-bottom: 1px solid #ccc;
+    background: url(../images/bg.gif) repeat-x; text-align: center }
+#banner a { color: white; }
+	
+p { margin: 10px 0; }
+
+li { margin-left: 10px; }
+
+h3 { margin: 1em 0 0; }
+
+h1 { font-size: 2em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1.4em; }
+h5 { font-size: 1.2em; }
+
+
+
+.line-separator{
+   height:1px;
+   background:#717171;
+   border-bottom:1px solid #313030;
+}
+

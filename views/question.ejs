@@ -1,0 +1,47 @@
+		<div class="cl">&nbsp;</div>
+      	<div id="content">
+      		<div class="block">
+        		<div class="block-bot">
+          			<div class="head">
+            			<div class="head-cnt">
+              				<h3>Playing Now</h3>
+              				<div class="cl">&nbsp;</div>
+            			</div>
+          			</div>
+          			<div class="row-articles articles">
+            			<div class="cl">&nbsp;</div>
+            			<div class="article">
+              				<form class="cmxform" id="form1" method="post" action="/canvas/film/test1">
+							<fieldset>
+								<legend><%= question %></legend>
+								<fieldset>
+									<label for="answer0">
+										<input  type="radio" id="answer0" value="<%= 0 %>" name="answer" validate="required:true" />
+										<%= answer0 %>
+									</label>
+									<label for="answer1">
+										<input  type="radio" id="answer1" value="<%= 1 %>" name="answer" />
+										<%= answer1 %>
+									</label>
+									<label for="answer2">
+										<input  type="radio" id="answer2" value="<%= 2  %>" name="answer" />
+										<%= answer2 %>
+									</label>
+									<label for="answer3">
+										<input  type="radio" id="answer3" value="<%= 3 %>" name="answer" />
+										<%= answer3 %>
+									</label>
+									<label for="question" class="error">Please select an answer.</label>
+								</fieldset>
+								<p><input  id="qsubmit" visible="true"  type="button" class="submit"  onclick="submitClicked()" value="Submit"/></p>
+							</fieldset>
+			  				</form>
+              				<div class="cl">&nbsp;</div>
+              				<div id="submain"></div>
+            			</div>
+            			<div class="cl">&nbsp;</div>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+

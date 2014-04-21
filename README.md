@@ -1,4 +1,4 @@
-edge
-====
+Edge
+============
 
-Frontend API service
+API layer with node.js
